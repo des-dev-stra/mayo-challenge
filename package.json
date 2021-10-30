@@ -1,0 +1,29 @@
+{
+	"name": "mayo-challenge",
+	"version": "1.0.0",
+	"description": "In this challenge, we would like you to build the front-end of a small web page from a prototype currently in Sketch.",
+	"main": "gulpfile.js",
+	"dependencies": {
+		"browser-sync": "^2.27.7",
+		"gulp": "^4.0.2"
+	},
+	"devDependencies": {
+		"browser-sync": "^2.27.7",
+		"gulp": "^4.0.2",
+		"gulp-sass": "^5.0.0",
+		"sass": "^1.43.4"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/des-dev-stra/mayo-challenge.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/des-dev-stra/mayo-challenge/issues"
+	},
+	"homepage": "https://github.com/des-dev-stra/mayo-challenge#readme"
+}

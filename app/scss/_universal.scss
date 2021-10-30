@@ -1,0 +1,102 @@
+@font-face {
+	font-family: "Source Sans Pro Regular";
+	src: url("/assets/fonts/SourceSansPro-Regular.woff2") format("woff2"), url("/assets/fonts/SourceSansProRegular.woff") format("woff");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Source Sans Pro Bold";
+	src: url("/assets/fonts/SourceSansPro-Bold.woff2") format("woff2"), url("/assets/fonts/SourceSansProBold.woff") format("woff");
+	font-weight: 700;
+}
+body {
+	font-family: "Source Sans Pro Regular", sans-serif;
+	overflow-x: hidden;
+}
+.page-wrapper {
+	width: 100%;
+	@media (min-width: 1401px) {
+		margin: 0 auto;
+		width: 1400px;
+	}
+}
+.btn {
+	border-radius: 30px;
+	background: transparent;
+	text-decoration: none;
+	padding: 15px 60px;
+	font-size: 18px;
+	&-link {
+		padding: 0;
+		margin: 0;
+		position: relative;
+		color: blue;
+		&:after {
+			content: "\203A";
+			font-size: 30px;
+			color: #0056ba;
+			position: absolute;
+			top: -5px;
+			right: -15px;
+		}
+	}
+	&-signup {
+		border: 1px solid #111111;
+		color: black;
+		padding: 15px 120px;
+	}
+	&-btt {
+		font-family: sans-serif;
+		color: white;
+		padding: 2px 0 0 0;
+		border-radius: 0;
+		border-top: 1px solid white;
+	}
+}
+
+h1,
+h2,
+h3 {
+	font-family: Georgia;
+}
+.section--hero h1,
+.section--ctas h2 {
+	font-size: 69px;
+	margin-bottom: 12px;
+}
+.section--hero p,
+.section--ctas p {
+	font-size: 23px;
+	line-height: 35px;
+	margin-bottom: 40px;
+}
+form {
+	.form__field-wrapper {
+		margin-bottom: 15px;
+		display: block;
+		&--email {
+			input {
+				width: 80%;
+			}
+		}
+		&--dob {
+			margin-bottom: 40px;
+			input {
+				width: 40%;
+				background-image: url(/assets/images/calendar.svg);
+				background-position: right 10px top 12px;
+				background-repeat: no-repeat;
+			}
+		}
+	}
+	label {
+		font-size: 23px;
+		margin-bottom: 10px;
+		font-weight: 400;
+		display: block;
+	}
+	input {
+		border: 1px solid #a8a8a8;
+		border-radius: 10px;
+		padding: 20px;
+	}
+}
