@@ -199,6 +199,15 @@ body {
   border-radius: 0;
   border-top: 1px solid white;
 }
+.btn-close {
+  position: absolute;
+  color: white;
+  text-decoration: none;
+  top: 48px;
+  right: 40px;
+  font-size: 14px;
+  font-weight: bold;
+}
 
 h1,
 h2,
@@ -313,23 +322,25 @@ form input {
     margin-right: 80px;
   }
 }
-.section--header nav {
+.section--header__default-menu {
   width: 70%;
-  padding: 40px 0;
-  display: none;
 }
-@media (min-width: 768px) {
-  .section--header nav {
+.section--header__default-menu nav {
+  display: none;
+  height: 100%;
+}
+@media (min-width: 953px) {
+  .section--header__default-menu nav {
     display: block;
   }
 }
-.section--header nav ul {
+.section--header__default-menu nav ul {
   display: flex;
   flex-wrap: wrap;
   height: 100%;
   width: 75%;
 }
-.section--header nav ul li {
+.section--header__default-menu nav ul li {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -338,7 +349,37 @@ form input {
   font-size: 18px;
   padding: 0;
 }
-.section--header__menu {
+.section--header__default-menu nav ul a {
+  color: black;
+  text-decoration: none;
+}
+.section--header__popout-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: black;
+  width: 375px;
+  padding: 60px 50px 0 150px;
+  display: none;
+}
+.section--header__popout-menu nav ul li {
+  display: block;
+}
+.section--header__popout-menu nav ul li:first-child {
+  margin-bottom: 100px;
+  font-size: 18px;
+}
+.section--header__popout-menu nav ul li:not(:first-child) {
+  font-family: Georgia;
+  font-size: 35px;
+  margin-bottom: 18px;
+}
+.section--header__popout-menu nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+.section--header__menu-text {
   padding: 40px 0;
   flex-grow: 1;
   text-align: center;
@@ -348,6 +389,9 @@ form input {
   max-width: 88px;
   min-width: 88px;
   margin-left: auto;
+}
+.section--header__menu-text:hover {
+  cursor: pointer;
 }
 .section--header__wrapper {
   max-width: 1440px;

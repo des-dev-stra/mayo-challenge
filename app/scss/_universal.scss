@@ -61,6 +61,15 @@ body {
 		border-radius: 0;
 		border-top: 1px solid white;
 	}
+	&-close {
+		position: absolute;
+		color: white;
+		text-decoration: none;
+		top: 48px;
+		right: 40px;
+		font-size: 14px;
+		font-weight: bold;
+	}
 }
 
 h1,
