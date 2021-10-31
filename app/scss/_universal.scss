@@ -1,3 +1,9 @@
+// Variables
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 16px;
+$max_font: 24px;
+
 @font-face {
 	font-family: "Source Sans Pro Regular";
 	src: url("/assets/fonts/SourceSansPro-Regular.woff2") format("woff2"), url("/assets/fonts/SourceSansProRegular.woff") format("woff");
@@ -25,6 +31,7 @@ body {
 	text-decoration: none;
 	padding: 15px 60px;
 	font-size: 18px;
+	display: inline-block;
 	&-link {
 		padding: 0;
 		margin: 0;
@@ -35,14 +42,17 @@ body {
 			font-size: 30px;
 			color: #0056ba;
 			position: absolute;
-			top: -5px;
+			top: -8px;
 			right: -15px;
 		}
 	}
 	&-signup {
 		border: 1px solid #111111;
 		color: black;
-		padding: 15px 120px;
+		padding: 15px 95px;
+		@media (min-width: 768px) {
+			padding: 15px 120px;
+		}
 	}
 	&-btt {
 		font-family: sans-serif;
@@ -60,14 +70,17 @@ h3 {
 }
 .section--hero h1,
 .section--ctas h2 {
-	font-size: 69px;
 	margin-bottom: 12px;
+	@include fluid-type($min_width, $max_width, 44px, 69px);
 }
 .section--hero p,
 .section--ctas p {
-	font-size: 23px;
-	line-height: 35px;
+	line-height: 27px;
 	margin-bottom: 40px;
+	@include fluid-type($min_width, $max_width, 18px, 23px);
+	@media (min-width: 768px) {
+		line-height: 35px;
+	}
 }
 form {
 	.form__field-wrapper {
@@ -75,13 +88,19 @@ form {
 		display: block;
 		&--email {
 			input {
-				width: 80%;
+				width: 90%;
+				@media (min-width: 768px) {
+					width: 80%;
+				}
 			}
 		}
 		&--dob {
 			margin-bottom: 40px;
 			input {
-				width: 40%;
+				width: 90%;
+				@media (min-width: 768px) {
+					width: 40%;
+				}
 				background-image: url(/assets/images/calendar.svg);
 				background-position: right 10px top 12px;
 				background-repeat: no-repeat;

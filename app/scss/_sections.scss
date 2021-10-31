@@ -2,10 +2,15 @@
 	display: flex;
 	width: 100%;
 	border-bottom: 1px solid #ccc;
-	margin-bottom: 40px;
+	@media (min-width: 768px) {
+		margin-bottom: 40px;
+	}
 	img {
-		width: 235px;
-		margin-right: 80px;
+		width: 195px;
+		@media (min-width: 992px) {
+			width: 235px;
+			margin-right: 80px;
+		}
 	}
 	nav {
 		width: 70%;
@@ -36,6 +41,10 @@
 		text-align: center;
 		font-weight: 700;
 		border-left: 1px solid #ccc;
+		line-height: 52px;
+		max-width: 88px;
+		min-width: 88px;
+		margin-left: auto;
 	}
 	&__wrapper {
 		max-width: 1440px;
@@ -53,17 +62,29 @@
 	min-height: 622px;
 	color: white;
 	display: flex;
-	margin-bottom: 30px;
+	@media (min-width: 768px) {
+		margin-bottom: 30px;
+	}
 	p {
-		max-width: 60%;
+		@media (min-width: 768px) {
+			max-width: 60%;
+		}
 	}
 	.btn {
 		color: white;
 		border: 2px solid white;
+		display: inline-block;
+		margin-bottom: 15px;
+		@media (min-width: 768px) {
+			margin-bottom: 0;
+		}
 	}
 	&__wrapper {
 		align-self: flex-end;
-		padding: 80px 60px;
+		padding: 24px;
+		@media (min-width: 768px) {
+			padding: 80px 60px;
+		}
 	}
 }
 
@@ -75,20 +96,32 @@
 	}
 	.row {
 		display: flex;
-		height: 614px;
-		margin-bottom: 30px;
+
+		flex-flow: column;
+		padding: 24px;
+		@media (min-width: 768px) {
+			height: 614px;
+			flex-flow: row;
+			margin-bottom: 30px;
+		}
 		&--one {
 			.col--one {
 				background-image: url("/assets/images/photo-8.jpg");
 				background-position: center;
 				background-size: cover;
+				min-height: 366px;
 			}
 		}
 		&--two {
+			flex-flow: column-reverse;
+			@media (min-width: 768px) {
+				flex-flow: row;
+			}
 			.col--two {
-				background-image: url("/assets/images/photo-8.jpg");
+				background-image: url("/assets/images/photo-9.jpg");
 				background-position: center;
 				background-size: cover;
+				min-height: 366px;
 			}
 		}
 		&--three {
@@ -100,6 +133,7 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				min-height: 366px;
 				img {
 					width: 112px;
 				}
@@ -109,10 +143,16 @@
 	.col {
 		&--one,
 		&--two {
-			width: 50%;
+			width: 100%;
+			@media (min-width: 768px) {
+				width: 50%;
+			}
 		}
 		&__wrapper {
-			padding: 70px;
+			padding-top: 100px;
+			@media (min-width: 768px) {
+				padding: 70px;
+			}
 		}
 		&--center-text {
 			display: flex;
@@ -124,60 +164,88 @@
 
 .section--news {
 	background: #f6f6f6;
-	left: 50%;
-	margin-left: -50vw;
-	margin-right: -50vw;
-	max-width: 100vw;
-	position: relative;
-	right: 50%;
-	width: 100vw;
-	padding: 90px 0;
+	padding: 43px 24px;
+	@media (min-width: 768px) {
+		left: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
+		max-width: 100vw;
+		position: relative;
+		right: 50%;
+		width: 100vw;
+		padding: 90px 0;
+	}
 	h2 {
-		font-size: 55px;
+		@include fluid-type($min_width, $max_width, 23px, 55px);
 		padding-bottom: 50px;
 	}
 	.grid-item {
-		width: 31%;
-		margin: 0 20px 50px 0;
+		flex-basis: 48.3%;
 		min-height: 454px;
+		@media (min-width: 768px) {
+			flex-basis: 31%;
+			margin: 0 20px 50px 0;
+		}
+		&:nth-child(odd) {
+			margin-right: 15px;
+		}
 		&__img {
 			height: 300px;
 			background: #000;
 			margin-bottom: 40px;
 		}
 		&__content {
+			margin-bottom: 40px;
+			@media (min-width: 768px) {
+				margin-bottom: 0;
+			}
 			h3 {
 				font-size: 29px;
 				margin-bottom: 20px;
 			}
 			p {
-				font-size: 18px;
+				@include fluid-type($min_width, $max_width, 14px, 18px);
 				color: #707070;
-				line-height: 27px;
+				line-height: 21px;
 				margin-bottom: 15px;
+				@media (min-width: 768px) {
+					line-height: 27px;
+				}
 			}
 		}
 		&:nth-child(3n + 3) {
-			margin-right: 0;
+			@media (min-width: 768px) {
+				margin-right: 0;
+			}
 		}
 	}
 	&__wrapper,
 	h2 {
 		display: flex;
 		flex-wrap: wrap;
-		margin: 0 auto;
-		width: 1400px;
+		@media (min-width: 768px) {
+			margin: 0 auto;
+			width: 1400px;
+		}
 	}
 }
 
 .section--footer {
 	background: #000;
 	color: white;
+	padding: 0 24px;
+	@media (min-width: 768px) {
+		padding: 0;
+	}
 	.row {
 		display: flex;
 		flex-wrap: wrap;
 		margin: 0 auto;
-		width: 1400px;
+
+		width: 100%;
+		@media (min-width: 768px) {
+			width: 1400px;
+		}
 		&--one {
 			padding: 40px 0;
 			display: flex;
@@ -187,8 +255,10 @@
 			display: block;
 			padding: 30px 0 150px;
 			p {
-				max-width: 40%;
 				margin-bottom: 20px;
+				@media (min-width: 768px) {
+					max-width: 40%;
+				}
 				&:last-child {
 					margin-bottom: 0;
 				}

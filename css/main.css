@@ -166,6 +166,7 @@ body {
   text-decoration: none;
   padding: 15px 60px;
   font-size: 18px;
+  display: inline-block;
 }
 .btn-link {
   padding: 0;
@@ -178,13 +179,18 @@ body {
   font-size: 30px;
   color: #0056ba;
   position: absolute;
-  top: -5px;
+  top: -8px;
   right: -15px;
 }
 .btn-signup {
   border: 1px solid #111111;
   color: black;
-  padding: 15px 120px;
+  padding: 15px 95px;
+}
+@media (min-width: 768px) {
+  .btn-signup {
+    padding: 15px 120px;
+  }
 }
 .btn-btt {
   font-family: sans-serif;
@@ -202,15 +208,51 @@ h3 {
 
 .section--hero h1,
 .section--ctas h2 {
-  font-size: 69px;
   margin-bottom: 12px;
+}
+.section--hero h1,
+.section--ctas h2 {
+  font-size: 44px;
+}
+@media screen and (min-width: 320px) {
+  .section--hero h1,
+.section--ctas h2 {
+    font-size: calc(44px + 25 * ((100vw - 320px) / 880));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section--hero h1,
+.section--ctas h2 {
+    font-size: 69px;
+  }
 }
 
 .section--hero p,
 .section--ctas p {
-  font-size: 23px;
-  line-height: 35px;
+  line-height: 27px;
   margin-bottom: 40px;
+}
+.section--hero p,
+.section--ctas p {
+  font-size: 18px;
+}
+@media screen and (min-width: 320px) {
+  .section--hero p,
+.section--ctas p {
+    font-size: calc(18px + 5 * ((100vw - 320px) / 880));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section--hero p,
+.section--ctas p {
+    font-size: 23px;
+  }
+}
+@media (min-width: 768px) {
+  .section--hero p,
+.section--ctas p {
+    line-height: 35px;
+  }
 }
 
 form .form__field-wrapper {
@@ -218,16 +260,26 @@ form .form__field-wrapper {
   display: block;
 }
 form .form__field-wrapper--email input {
-  width: 80%;
+  width: 90%;
+}
+@media (min-width: 768px) {
+  form .form__field-wrapper--email input {
+    width: 80%;
+  }
 }
 form .form__field-wrapper--dob {
   margin-bottom: 40px;
 }
 form .form__field-wrapper--dob input {
-  width: 40%;
+  width: 90%;
   background-image: url(/assets/images/calendar.svg);
   background-position: right 10px top 12px;
   background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  form .form__field-wrapper--dob input {
+    width: 40%;
+  }
 }
 form label {
   font-size: 23px;
@@ -246,11 +298,20 @@ form input {
   display: flex;
   width: 100%;
   border-bottom: 1px solid #ccc;
-  margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .section--header {
+    margin-bottom: 40px;
+  }
 }
 .section--header img {
-  width: 235px;
-  margin-right: 80px;
+  width: 195px;
+}
+@media (min-width: 992px) {
+  .section--header img {
+    width: 235px;
+    margin-right: 80px;
+  }
 }
 .section--header nav {
   width: 70%;
@@ -283,6 +344,10 @@ form input {
   text-align: center;
   font-weight: 700;
   border-left: 1px solid #ccc;
+  line-height: 52px;
+  max-width: 88px;
+  min-width: 88px;
+  margin-left: auto;
 }
 .section--header__wrapper {
   max-width: 1440px;
@@ -299,18 +364,36 @@ form input {
   min-height: 622px;
   color: white;
   display: flex;
-  margin-bottom: 30px;
 }
-.section--hero p {
-  max-width: 60%;
+@media (min-width: 768px) {
+  .section--hero {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 768px) {
+  .section--hero p {
+    max-width: 60%;
+  }
 }
 .section--hero .btn {
   color: white;
   border: 2px solid white;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+  .section--hero .btn {
+    margin-bottom: 0;
+  }
 }
 .section--hero__wrapper {
   align-self: flex-end;
-  padding: 80px 60px;
+  padding: 24px;
+}
+@media (min-width: 768px) {
+  .section--hero__wrapper {
+    padding: 80px 60px;
+  }
 }
 
 .section--ctas {
@@ -322,18 +405,35 @@ form input {
 }
 .section--ctas .row {
   display: flex;
-  height: 614px;
-  margin-bottom: 30px;
+  flex-flow: column;
+  padding: 24px;
+}
+@media (min-width: 768px) {
+  .section--ctas .row {
+    height: 614px;
+    flex-flow: row;
+    margin-bottom: 30px;
+  }
 }
 .section--ctas .row--one .col--one {
   background-image: url("/assets/images/photo-8.jpg");
   background-position: center;
   background-size: cover;
+  min-height: 366px;
+}
+.section--ctas .row--two {
+  flex-flow: column-reverse;
+}
+@media (min-width: 768px) {
+  .section--ctas .row--two {
+    flex-flow: row;
+  }
 }
 .section--ctas .row--two .col--two {
-  background-image: url("/assets/images/photo-8.jpg");
+  background-image: url("/assets/images/photo-9.jpg");
   background-position: center;
   background-size: cover;
+  min-height: 366px;
 }
 .section--ctas .row--three h2 {
   margin-bottom: 30px;
@@ -343,15 +443,26 @@ form input {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 366px;
 }
 .section--ctas .row--three .col--one img {
   width: 112px;
 }
 .section--ctas .col--one, .section--ctas .col--two {
-  width: 50%;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .section--ctas .col--one, .section--ctas .col--two {
+    width: 50%;
+  }
 }
 .section--ctas .col__wrapper {
-  padding: 70px;
+  padding-top: 100px;
+}
+@media (min-width: 768px) {
+  .section--ctas .col__wrapper {
+    padding: 70px;
+  }
 }
 .section--ctas .col--center-text {
   display: flex;
@@ -361,59 +472,127 @@ form input {
 
 .section--news {
   background: #f6f6f6;
-  left: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  max-width: 100vw;
-  position: relative;
-  right: 50%;
-  width: 100vw;
-  padding: 90px 0;
+  padding: 43px 24px;
+}
+@media (min-width: 768px) {
+  .section--news {
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: 100vw;
+    position: relative;
+    right: 50%;
+    width: 100vw;
+    padding: 90px 0;
+  }
 }
 .section--news h2 {
-  font-size: 55px;
   padding-bottom: 50px;
 }
+.section--news h2 {
+  font-size: 23px;
+}
+@media screen and (min-width: 320px) {
+  .section--news h2 {
+    font-size: calc(23px + 32 * ((100vw - 320px) / 880));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section--news h2 {
+    font-size: 55px;
+  }
+}
 .section--news .grid-item {
-  width: 31%;
-  margin: 0 20px 50px 0;
+  flex-basis: 48.3%;
   min-height: 454px;
+}
+@media (min-width: 768px) {
+  .section--news .grid-item {
+    flex-basis: 31%;
+    margin: 0 20px 50px 0;
+  }
+}
+.section--news .grid-item:nth-child(odd) {
+  margin-right: 15px;
 }
 .section--news .grid-item__img {
   height: 300px;
   background: #000;
   margin-bottom: 40px;
 }
+.section--news .grid-item__content {
+  margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .section--news .grid-item__content {
+    margin-bottom: 0;
+  }
+}
 .section--news .grid-item__content h3 {
   font-size: 29px;
   margin-bottom: 20px;
 }
 .section--news .grid-item__content p {
-  font-size: 18px;
   color: #707070;
-  line-height: 27px;
+  line-height: 21px;
   margin-bottom: 15px;
 }
-.section--news .grid-item:nth-child(3n+3) {
-  margin-right: 0;
+.section--news .grid-item__content p {
+  font-size: 14px;
+}
+@media screen and (min-width: 320px) {
+  .section--news .grid-item__content p {
+    font-size: calc(14px + 4 * ((100vw - 320px) / 880));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section--news .grid-item__content p {
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) {
+  .section--news .grid-item__content p {
+    line-height: 27px;
+  }
+}
+@media (min-width: 768px) {
+  .section--news .grid-item:nth-child(3n+3) {
+    margin-right: 0;
+  }
 }
 .section--news__wrapper,
 .section--news h2 {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
-  width: 1400px;
+}
+@media (min-width: 768px) {
+  .section--news__wrapper,
+.section--news h2 {
+    margin: 0 auto;
+    width: 1400px;
+  }
 }
 
 .section--footer {
   background: #000;
   color: white;
+  padding: 0 24px;
+}
+@media (min-width: 768px) {
+  .section--footer {
+    padding: 0;
+  }
 }
 .section--footer .row {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  width: 1400px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .section--footer .row {
+    width: 1400px;
+  }
 }
 .section--footer .row--one {
   padding: 40px 0;
@@ -425,8 +604,12 @@ form input {
   padding: 30px 0 150px;
 }
 .section--footer .row--two p {
-  max-width: 40%;
   margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .section--footer .row--two p {
+    max-width: 40%;
+  }
 }
 .section--footer .row--two p:last-child {
   margin-bottom: 0;
