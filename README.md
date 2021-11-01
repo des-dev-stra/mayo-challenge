@@ -1,4 +1,4 @@
-### Run Instructions
+# Run Instructions
 
 1. Install npm packages
 2. Run "gulp" in terminal
