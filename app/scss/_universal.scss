@@ -29,7 +29,7 @@ body {
 	border-radius: 30px;
 	background: transparent;
 	text-decoration: none;
-	padding: 15px 60px;
+	padding: 17px 90px;
 	font-size: 18px;
 	display: inline-block;
 	&-link {
@@ -62,13 +62,13 @@ body {
 		border-top: 1px solid white;
 	}
 	&-close {
+		font-family: "Source Sans Pro Bold";
 		position: absolute;
 		color: white;
 		text-decoration: none;
 		top: 48px;
 		right: 40px;
 		font-size: 14px;
-		font-weight: bold;
 	}
 }
 
@@ -126,5 +126,6 @@ form {
 		border: 1px solid #a8a8a8;
 		border-radius: 10px;
 		padding: 20px;
+		font-size: 18px;
 	}
 }
