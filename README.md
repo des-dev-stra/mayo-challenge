@@ -1,3 +1,9 @@
+### Run Instructions
+
+1. Install npm packages
+2. Run "gulp" in terminal
+3. View magical things
+
 # Mayo Front End Challenge
 
 In this challenge, we would like you to build the front-end of a small web page from a prototype currently in Sketch.
